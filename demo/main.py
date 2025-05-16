@@ -62,6 +62,14 @@ def main():
         col1.write(f"Predicted eye disease: **{predicted_label[0]}**")
         col1.write(f"Confidence: **{image_pred_probs.max() * 100:.2f}%**")
 
+        # col1.markdown("### Probability Distribution")
+        # probs = image_pred_probs.squeeze().tolist()
+        # for class_name, prob in zip(class_names, probs):
+        #     percentage = prob * 100
+        #     col1.markdown(f"- **{class_name}:** {percentage:.2f}%")
+
+
+
         # Display the uploaded image on the right column
         with col2:
             image = Image.open(custom_image_path)
